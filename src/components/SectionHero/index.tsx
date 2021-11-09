@@ -25,21 +25,11 @@ const SectionHero = ({ logo, header }: Props) => (
           <S.Title>{header.title}</S.Title>
           <S.Description>{header.description}</S.Description>
           <S.ButtonWrapper>
-<<<<<<< HEAD
             <Button href={header.button.url} onClick={onClick} wide>
               {header.button.label}
-=======
-            <Button
-              href="https://www.udemy.com/course/react-avancado/?couponCode=PROMONOV21"
-              onClick={onClick}
-              wide
-            >
-              Comprar
->>>>>>> be1cebdfa2d4c8fbf8110ac6553ad3a60ee61dcc
             </Button>
           </S.ButtonWrapper>
         </S.TextBlock>
-
         <S.Image
           src={getImageUrl(header.image.url)}
           alt={getImageUrl(header.image.alternativeText)}
