@@ -1,3 +1,5 @@
+//teste de comite
+
 const GET_LANDING_PAGE = /* Graphql */ `
 
 fragment logo on LandingPage {
