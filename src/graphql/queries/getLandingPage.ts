@@ -1,5 +1,4 @@
 const GET_LANDING_PAGE = /* Graphql */ `
-
 fragment logo on LandingPage {
   logo {
     alternativeText
@@ -21,11 +20,34 @@ fragment header on LandingPage {
     }
   }
 }
+fragment sectionAboutProject on LandingPage {
+  sectionAboutProject {
+    title
+    description
+    image {
+      url
+      alternativeText
+    }
+  }
+}
+fragment sectionTech on LandingPage {
+  sectionTech {
+    title
+    techIcons {
+      title
+      icon{
+        url
+      }
+    }
+  }
+}
 
 query GET_LANDING_PAGE {
   landingPage {
     ...logo
     ...header
+    ...sectionAboutProject
+    ...sectionTech
   }
 }
 `
