@@ -9,6 +9,7 @@ export type LogoProps = {
   alternativeText: string
   url: string
 }
+
 export type HeaderProps = {
   title: string
   description: string
@@ -27,9 +28,17 @@ export type SectionAboutProjectProps = {
   description: string
   image: LogoProps[]
 }
+
 export type SectionTechProps = {
   title: string
   techIcons: TechIcon[]
+}
+
+export type SectionConceptsProps = {
+  title: string
+  concepts: Array<{
+    title: string
+  }>
 }
 
 export type LandingPageProps = {
@@ -37,4 +46,5 @@ export type LandingPageProps = {
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
   sectionTech: SectionTechProps
+  sectionConcepts: SectionConceptsProps
 }
