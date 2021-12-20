@@ -2,13 +2,13 @@
 
 const GET_LANDING_PAGE = /* Graphql */ `
 
+
 fragment logo on LandingPage {
   logo {
     alternativeText
     url
   }
 }
-
 fragment header on LandingPage {
   header {
     title
@@ -44,7 +44,6 @@ fragment sectionTech on LandingPage {
     }
   }
 }
-
 fragment sectionConcepts on LandingPage {
   sectionConcepts {
     title
@@ -53,7 +52,6 @@ fragment sectionConcepts on LandingPage {
     }
   }
 }
-
 fragment sectionModules on LandingPage {
   sectionModules {
     title
@@ -62,10 +60,8 @@ fragment sectionModules on LandingPage {
       subtitle
       description
     }
-
   }
 }
-
 fragment sectionAgenda on LandingPage {
   sectionAgenda {
     title
@@ -73,6 +69,18 @@ fragment sectionAgenda on LandingPage {
   }
 }
 
+fragment pricingBox on LandingPage {
+  pricingBox {
+    totalPrice
+    priceInstallment
+    benefits
+    numberInstallments
+    button {
+      label
+      url
+    }
+  }
+}
 query GET_LANDING_PAGE {
   landingPage {
     ...logo
@@ -82,6 +90,7 @@ query GET_LANDING_PAGE {
     ...sectionConcepts
     ...sectionModules
     ...sectionAgenda
+    ...pricingBox
   }
 }
 `
