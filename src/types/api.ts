@@ -1,3 +1,19 @@
+export type SocialLink = {
+  title: string
+  url: string
+}
+
+export type Author = {
+  name: string
+  photo: {
+    alternativeText: string
+    url: string
+  }
+  role: string
+  description: string
+  socialLinks: SocialLink[]
+}
+
 export type module = {
   title: string
   subtitle: string
@@ -67,6 +83,10 @@ export type PricingBoxProps = {
     url: string
   }
 }
+export type SectionAboutUsProps = {
+  title: string
+  authors: Author[]
+}
 
 export type LandingPageProps = {
   logo: LogoProps
@@ -77,4 +97,5 @@ export type LandingPageProps = {
   sectionModules: SectionModulesProps
   sectionAgenda: SectionAgendaProps
   pricingBox: PricingBoxProps
+  sectionAboutUs: SectionAboutUsProps
 }
