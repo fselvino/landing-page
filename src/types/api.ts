@@ -1,17 +1,17 @@
+export type Image = {
+  alternativeText: string
+  url: string
+}
 export type SocialLink = {
   title: string
   url: string
 }
-
 export type Author = {
   name: string
-  photo: {
-    alternativeText: string
-    url: string
-  }
   role: string
-  description: string
   socialLinks: SocialLink[]
+  photo: Image
+  description: string
 }
 
 export type module = {
@@ -27,10 +27,7 @@ export type TechIcon = {
   }
 }
 
-export type LogoProps = {
-  alternativeText: string
-  url: string
-}
+export type LogoProps = Image
 
 export type HeaderProps = {
   title: string
@@ -39,10 +36,7 @@ export type HeaderProps = {
     label: string
     url: string
   }
-  image: {
-    alternativeText: string
-    url: string
-  }
+  image: Image
 }
 
 export type SectionAboutProjectProps = {
@@ -83,6 +77,7 @@ export type PricingBoxProps = {
     url: string
   }
 }
+
 export type SectionAboutUsProps = {
   title: string
   authors: Author[]
